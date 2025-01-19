@@ -7,7 +7,7 @@
 //     const formData = new FormData();
 //     formData.append('image', file);
 
-//     axios.post('http://localhost:5000/uploadImage', formData)
+//     axios.post('https://email-builder-back-end-1.onrender.com/uploadImage', formData)
 //       .then((response) => {
 //         setEmailConfig((prev) => ({ ...prev, imageUrl: response.data.imageUrl }));
 //       })
@@ -39,7 +39,7 @@
 //     const formData = new FormData();
 //     formData.append('image', file);
 
-//     axios.post('http://localhost:5000/uploadImage', formData)
+//     axios.post('https://email-builder-back-end-1.onrender.com/uploadImage', formData)
 //       .then((response) => {
 //         setEmailConfig((prev) => ({ ...prev, imageUrl: response.data.imageUrl }));
 //       })
@@ -72,7 +72,7 @@ function UploadImage({ setEmailConfig }) {
     const formData = new FormData();
     formData.append('image', file);
 
-    axios.post('http://localhost:5000/uploadImage', formData)
+    axios.post('https://email-builder-back-end-1.onrender.com/uploadImage', formData)
       .then((response) => {
         setEmailConfig((prev) => ({
           ...prev,

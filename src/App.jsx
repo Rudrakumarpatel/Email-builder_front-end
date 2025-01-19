@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     // Fetch layout and saved configs
-    axios.get('http://localhost:5000/getEmailLayout').then((response) => {
+    axios.get('https://email-builder-back-end-1.onrender.com/getEmailLayout').then((response) => {
       setLayoutHTML(response.data.layout);
       setSections([
         { id: 'title', label: 'Title', type: 'text' },
@@ -27,7 +27,7 @@ function App() {
       ]);
     });
 
-    axios.get('http://localhost:5000/getEmailConfigs').then((response) => {
+    axios.get('https://email-builder-back-end-1.onrender.com/getEmailConfigs').then((response) => {
       setSavedConfigs(response.data);
     });
   }, []);
@@ -46,9 +46,9 @@ function App() {
     }, {});
 
     axios
-      .post('http://localhost:5000/uploadEmailConfig', emailConfig)
+      .post('https://email-builder-back-end-1.onrender.com/uploadEmailConfig', emailConfig)
       .then((response) => {
-        axios.get('http://localhost:5000/getEmailConfigs').then((response) => {
+        axios.get('https://email-builder-back-end-1.onrender.com/getEmailConfigs').then((response) => {
           alert("Email-Template Save Successfully");
           setSavedConfigs(response.data); 
         });
